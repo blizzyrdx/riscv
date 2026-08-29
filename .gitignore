@@ -1,0 +1,10 @@
+README.md
+.Xil/
+*.jou
+*.log
+*.str
+*.cache/
+*.runs/
+*.sim/
+*.hw/
+*.ip_user_files/
