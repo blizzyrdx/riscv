@@ -1,10 +1,11 @@
 `timescale 1ns/1ps
 `default_nettype none
 
+// performs arithmetic and logical calculations
 module rv32_alu (
-    input  logic [31:0] a,
-    input  logic [31:0] b,
-    input  logic [3:0]  op,
+    input  wire logic [31:0] a,
+    input  wire logic [31:0] b,
+    input  wire logic [3:0]  op,
     output logic [31:0] y
 );
     localparam logic [3:0]

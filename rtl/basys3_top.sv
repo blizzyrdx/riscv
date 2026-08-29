@@ -1,13 +1,14 @@
 `timescale 1ns/1ps
 `default_nettype none
 
+// Basys3 top-level module
 module basys3_top (
-    input  logic        CLK100MHZ,
-    input  logic        btnC,
-    input  logic [15:0] sw,
-    output logic [15:0] led
+    input  wire logic        CLK100MHZ,
+    input  wire logic        btnC,
+    input  wire logic [15:0] sw, //Switches (FPGA Inputs)
+    output logic [15:0] led //LED (FPGA Outputs)
 );
-    logic [23:0] divider;
+    logic [23:0] divider; //slows CPU down from 100 MHz to a slower speed for visible execution
     logic        cpu_ce;
     logic [31:0] out_port;
     logic [31:0] debug_pc;

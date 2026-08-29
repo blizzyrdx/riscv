@@ -1,18 +1,19 @@
 `timescale 1ns/1ps
 `default_nettype none
 
+// actual CPU core module
 module rv32_core (
-    input  logic        clk,
-    input  logic        reset,
-    input  logic        ce,
+    input  wire logic        clk,
+    input  wire logic        reset,
+    input  wire logic        ce,
 
     output logic [31:0] pc,
-    input  logic [31:0] instr,
+    input  wire logic [31:0] instr,
 
     output logic        mem_we,
     output logic [31:0] mem_addr,
     output logic [31:0] mem_wdata,
-    input  logic [31:0] mem_rdata,
+    input  wire logic [31:0] mem_rdata,
 
     output logic [31:0] debug_x1
 );

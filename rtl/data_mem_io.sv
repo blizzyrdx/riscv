@@ -1,16 +1,17 @@
 `timescale 1ns/1ps
 `default_nettype none
 
+// RAM + switches + LEDs
 module data_mem_io #(
     parameter integer WORDS = 256
 ) (
-    input  logic        clk,
-    input  logic        reset,
-    input  logic        we,
-    input  logic [31:0] addr,
-    input  logic [31:0] wdata,
-    output logic [31:0] rdata,
-    input  logic [15:0] in_port,
+    input  wire logic        clk, //requires wire 
+    input  wire logic        reset,
+    input  wire logic        we,
+    input  wire logic [31:0] addr,
+    input  wire logic [31:0] wdata,
+    output logic [31:0] rdata, //doesn't require wire
+    input  wire logic [15:0] in_port,
     output logic [31:0] out_port
 );
     localparam logic [31:0] IO_OUT_ADDR = 32'h1000_0000;

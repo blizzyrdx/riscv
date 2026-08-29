@@ -1,13 +1,14 @@
 `timescale 1ns/1ps
 `default_nettype none
 
+// Acts as the top-level module for the RV32 SoC, acting as a motherboard 
 module rv32_soc #(
     parameter string PROGRAM_FILE = "demo.mem"
 ) (
-    input  logic        clk,
-    input  logic        reset,
-    input  logic        cpu_ce,
-    input  logic [15:0] in_port,
+    input  wire logic        clk,
+    input  wire logic        reset,
+    input  wire logic        cpu_ce,
+    input  wire logic [15:0] in_port,
     output logic [31:0] out_port,
     output logic [31:0] debug_pc,
     output logic [31:0] debug_x1

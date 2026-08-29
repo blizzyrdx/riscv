@@ -1,14 +1,15 @@
 `timescale 1ns/1ps
 `default_nettype none
 
+//the 32 general-purpose registers
 module rv32_regfile (
-    input  logic        clk,
-    input  logic        reset,
-    input  logic        we,
-    input  logic [4:0]  rs1,
-    input  logic [4:0]  rs2,
-    input  logic [4:0]  rd,
-    input  logic [31:0] wd,
+    input  wire logic        clk,
+    input  wire logic        reset,
+    input  wire logic        we,
+    input  wire logic [4:0]  rs1,
+    input  wire logic [4:0]  rs2,
+    input  wire logic [4:0]  rd,
+    input  wire logic [31:0] wd,
     output logic [31:0] rd1,
     output logic [31:0] rd2,
     output logic [31:0] debug_x1

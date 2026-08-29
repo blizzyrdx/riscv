@@ -1,11 +1,12 @@
 `timescale 1ns/1ps
 `default_nettype none
 
+// instruction memory module
 module instr_mem #(
     parameter integer WORDS = 256,
     parameter string  INIT_FILE = "demo.mem"
 ) (
-    input  logic [31:0] addr,
+    input  wire logic [31:0] addr,
     output logic [31:0] rdata
 );
     logic [31:0] mem [0:WORDS-1];
