@@ -8,8 +8,10 @@ module rv32_alu (
     input  wire logic [3:0]  op,
     output logic [31:0] y //outputs
 );
-    localparam logic [3:0]
-        ALU_ADD  = 4'd0,
+
+//in assembly: add x3, x1, x2 results in x3 = x1 + x2, where x1 and x2 are the inputs to the ALU, and x3 is the output of the ALU
+    localparam logic [3:0] // localparam is similar to a constant in c++
+        ALU_ADD  = 4'd0, // 4 bits, decimal 0
         ALU_SUB  = 4'd1,
         ALU_AND  = 4'd2,
         ALU_OR   = 4'd3,
@@ -20,7 +22,7 @@ module rv32_alu (
         ALU_SRL  = 4'd8,
         ALU_SRA  = 4'd9;
 
-    always_comb begin
+    always_comb begin //combinational logic block, meaning the output is continuously updated based on the inputs
         case (op)
             ALU_ADD : y = a + b;
             ALU_SUB : y = a - b;
