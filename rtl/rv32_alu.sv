@@ -1,12 +1,12 @@
 `timescale 1ns/1ps
-`default_nettype none
+`default_nettype none //indicates no new wires are made by default, and all wires must be explicitly declared
 
 // performs arithmetic and logical calculations
 module rv32_alu (
-    input  wire logic [31:0] a,
+    input  wire logic [31:0] a, //two 32-bit inputs to the ALU
     input  wire logic [31:0] b,
     input  wire logic [3:0]  op,
-    output logic [31:0] y
+    output logic [31:0] y //outputs
 );
     localparam logic [3:0]
         ALU_ADD  = 4'd0,
