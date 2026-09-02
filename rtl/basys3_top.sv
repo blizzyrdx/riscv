@@ -3,13 +3,13 @@
 
 // Basys3 top-level module
 module basys3_top (
-    input  wire logic        CLK100MHZ,
-    input  wire logic        btnC,
-    input  wire logic [15:0] sw, //Switches (FPGA Inputs)
-    output logic [15:0] led //LED (FPGA Outputs)
+    input  wire logic        CLK100MHZ, // 100 MHz clock input
+    input  wire logic        btnC, // Center pushbutton (FPGA Reset)
+    input  wire logic [15:0] sw, // Switches (FPGA Inputs)
+    output logic [15:0] led // LED (FPGA Outputs)
 );
-    logic [23:0] divider; //slows CPU down from 100 MHz to a slower speed for visible execution
-    logic        cpu_ce;
+    logic [23:0] divider; // slows CPU down from 100 MHz to a slower speed for visible execution
+    logic        cpu_ce; 
     logic [31:0] out_port;
     logic [31:0] debug_pc;
     logic [31:0] debug_x1;
@@ -18,9 +18,9 @@ module basys3_top (
     // 100 MHz / 2^24 = about 5.96 instructions/second.
     always_ff @(posedge CLK100MHZ) begin
         if (btnC)
-            divider <= 24'd0;
+            divider <= 24'd0; // if button presses goes to 0, reset the counter to 0
         else
-            divider <= divider + 24'd1;
+            divider <= divider + 24'd1; // specifies 24 bits in decimal (10), and increments the counter by 1 each clock cycle
     end
 
     // SW0 = 0: slow visible execution
