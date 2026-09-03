@@ -21,7 +21,7 @@ module data_mem_io #(
     integer i;
 
     initial begin
-        for (i = 0; i < WORDS; i = i + 1)
+        for (i = 0; i < WORDS; i = i + 1) // if the number of words is 256, then the loop will run from 0 to 255, initializing each memory location to 0
             mem[i] = 32'd0;
     end
 
