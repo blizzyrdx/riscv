@@ -2,6 +2,7 @@
 `default_nettype none
 
 //the 32 general-purpose registers
+//for x86 it can only have 8 general-purpose registers, but RISC-V has 32 general-purpose registers
 module rv32_regfile (
     input  wire logic        clk,
     input  wire logic        reset,
