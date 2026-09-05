@@ -5,12 +5,12 @@
 module data_mem_io #(
     parameter integer WORDS = 256
 ) (
-    input  wire logic        clk, //wire is net type
-    input  wire logic        reset,
+    input  wire logic        clk, // wire is net type, logic is data type, clk is the name of the input signal
+    input  wire logic        reset, 
     input  wire logic        we,
     input  wire logic [31:0] addr,
     input  wire logic [31:0] wdata,
-    output logic [31:0] rdata, //doesn't require wire
+    output logic [31:0] rdata, // doesn't require wire
     input  wire logic [15:0] in_port,
     output logic [31:0] out_port
 );
