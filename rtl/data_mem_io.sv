@@ -15,7 +15,7 @@ module data_mem_io #(
     output logic [31:0] out_port
 );
     localparam logic [31:0] IO_OUT_ADDR = 32'h1000_0000;
-    localparam logic [31:0] IO_IN_ADDR  = 32'h1000_0004;
+    localparam logic [31:0] IO_IN_ADDR  = 32'h1000_0004; //32 bit hexadecimal value
 
     logic [31:0] mem [0:WORDS-1];
     integer i;

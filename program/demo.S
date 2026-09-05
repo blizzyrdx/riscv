@@ -1,4 +1,4 @@
-# Tiny RV32I demo program for the included CPU.
+# RV32I demo program for the included CPU that is seen on FPGA boards with LEDs and switches.
 # It continuously increments x1 and writes x1 to the LED output register.
 #
 # Memory-mapped I/O:
