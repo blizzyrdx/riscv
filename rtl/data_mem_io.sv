@@ -3,7 +3,7 @@
 
 // RAM + switches + LEDs
 module data_mem_io #(
-    parameter integer WORDS = 256 // number of 32-bit words in the memory
+    parameter integer WORDS = 256 // number of 32-bit words in the memory meaning I have 1024 bytes of memory (256 * 4 bytes)
 ) (
     input  wire logic        clk, // wire is net type, logic is data type, clk is the name of the input signal
     input  wire logic        reset, 
