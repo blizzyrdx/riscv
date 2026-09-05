@@ -5,7 +5,7 @@
 module data_mem_io #(
     parameter integer WORDS = 256
 ) (
-    input  wire logic        clk, //requires wire 
+    input  wire logic        clk, //wire is net type
     input  wire logic        reset,
     input  wire logic        we,
     input  wire logic [31:0] addr,
