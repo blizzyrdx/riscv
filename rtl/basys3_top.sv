@@ -16,7 +16,7 @@ module basys3_top (
 
     // In slow mode, execute one instruction each time this 24-bit counter wraps:
     // 100 MHz / 2^24 = about 5.96 instructions/second.
-    always_ff @(posedge CLK100MHZ) begin
+    always_ff @(posedge CLK100MHZ) begin //posedge is rising edge of the clock signal
         if (btnC)
             divider <= 24'd0; // if button presses goes to 0, reset the counter to 0
         else
