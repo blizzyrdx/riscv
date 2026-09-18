@@ -3,10 +3,10 @@
 
 // Basys3 top-level module
 module basys3_top (
-    input  wire logic        CLK100MHZ, // 100 MHz clock input
-    input  wire logic        btnC, // Center pushbutton (FPGA Reset)
-    input  wire logic [15:0] sw, // Switches (FPGA Inputs)
-    output logic [15:0] led // LED (FPGA Outputs)
+    input  wire logic        CLK100MHZ, 
+    input  wire logic        btnC, 
+    input  wire logic [15:0] sw, 
+    output logic [15:0] led 
 );
     logic [23:0] divider; // slows CPU down from 100 MHz to a slower speed for visible execution
     logic        cpu_ce; 
