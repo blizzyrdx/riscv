@@ -23,8 +23,6 @@ module basys3_top (
             divider <= divider + 24'd1; // specifies 24 bits in decimal (10), and increments the counter by 1 each clock cycle
     end
 
-    // SW0 = 0: slow visible execution
-    // SW0 = 1: full 100 MHz execution
     assign cpu_ce = sw[0] ? 1'b1 : (&divider);
 
     rv32_soc #(
