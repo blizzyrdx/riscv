@@ -5,7 +5,7 @@
 module data_mem_io #(
     parameter integer WORDS = 256 // number of 32-bit words in the memory meaning I have 1024 bytes of memory (256 * 4 bytes)
 ) (
-    input  wire logic        clk, // wire is net type, logic is data type, clk is the name of the input signal
+    input  wire logic        clk, 
     input  wire logic        reset, 
     input  wire logic        we,
     input  wire logic [31:0] addr,
@@ -15,7 +15,7 @@ module data_mem_io #(
     output logic [31:0] out_port
 );
     localparam logic [31:0] IO_OUT_ADDR = 32'h1000_0000;
-    localparam logic [31:0] IO_IN_ADDR  = 32'h1000_0004; //32 bit hexadecimal value
+    localparam logic [31:0] IO_IN_ADDR  = 32'h1000_0004;
 
     logic [31:0] mem [0:WORDS-1];
     integer i;
