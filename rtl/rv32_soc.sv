@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 `default_nettype none
 
-// Acts as the top-level module for the RV32 SoC, acting as a motherboard 
+// Acts as the top-level module
 module rv32_soc #(
     parameter string PROGRAM_FILE = "demo.mem"
 ) (
