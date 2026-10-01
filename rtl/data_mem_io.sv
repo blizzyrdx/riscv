@@ -2,14 +2,14 @@
 `default_nettype none
 
 module data_mem_io #(
-    parameter integer WORDS = 256 // number of 32-bit words in the memory meaning I have 1024 bytes of memory (256 * 4 bytes)
+    parameter integer WORDS = 256 
 ) (
     input  wire logic        clk, 
     input  wire logic        reset, 
     input  wire logic        we,
     input  wire logic [31:0] addr,
     input  wire logic [31:0] wdata,
-    output logic [31:0] rdata, // doesn't require wire
+    output logic [31:0] rdata,
     input  wire logic [15:0] in_port,
     output logic [31:0] out_port
 );
