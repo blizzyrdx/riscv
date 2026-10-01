@@ -2,7 +2,6 @@
 `default_nettype none
 
 // actual CPU core module
-// nettype and timescale are set to override
 
 module rv32_core (
     input  wire logic        clk,
