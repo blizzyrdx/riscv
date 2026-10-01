@@ -1,7 +1,6 @@
 `timescale 1ns/1ps
 `default_nettype none
 
-// RAM + switches + LEDs
 module data_mem_io #(
     parameter integer WORDS = 256 // number of 32-bit words in the memory meaning I have 1024 bytes of memory (256 * 4 bytes)
 ) (
